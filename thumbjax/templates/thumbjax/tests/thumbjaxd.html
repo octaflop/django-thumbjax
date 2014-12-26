@@ -1,0 +1,21 @@
+{% extends "thumbjax/tests/_base.html" %}
+
+{% load thumbjax_tags %}
+
+{% block body %}
+<ul>
+  {% for img in test_images %}
+    <li>
+      {# {% thumbjaxer img '1376x433' crop='noop' %} #}
+      <img {% thumbjax img '1006' crop='center' quality='89' %} />
+      {# width='{{ crop.width }}' height='{{ crop.height }}' /> #}
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="{{ STATIC_URL }}/assets/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}/js/thumbjax.js"></script>
+{% endblock %}

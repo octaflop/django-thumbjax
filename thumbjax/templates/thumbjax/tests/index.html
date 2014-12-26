@@ -1,0 +1,16 @@
+{% extends "thumbjax/tests/_base.html" %}
+{% block nav %}
+{% endblock %}
+{% block body %}
+  <ul>
+    <li>
+      <a href="{% url thumbjax:tests:control %}">Control Group</a>
+    </li>
+    <li>
+      <a href="{% url thumbjax:tests:std %}">Standard Thumbnailer</a>
+    </li>
+    <li>
+      <a href="{% url thumbjax:tests:jaxd %}">Thumbjax</a>
+    </li>
+  </ul>
+{% endblock %}

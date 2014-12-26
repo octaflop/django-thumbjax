@@ -1,0 +1,10 @@
+{% extends "thumbjax/tests/_base.html" %}
+{% block body %}
+<ul>
+  {% for img in test_images %}
+    <li>
+      <img src="{{ img.url }}" />
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

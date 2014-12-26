@@ -1,0 +1,15 @@
+{% extends "thumbjax/tests/_base.html" %}
+
+{% load thumbnail %}
+
+{% block body %}
+<ul>
+  {% for img in test_images %}
+    <li>
+      {% thumbnail img '750x400' format='PNG' crop='center' as cropped %}
+        <img src="{{ cropped.url }}" />
+      {% endthumbnail %}
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}
